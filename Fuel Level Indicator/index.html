@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "geometry.js" defer></script>
+    <script src = "app.js" defer></script>
+    
+</head>
+<body>
+    <input type = "button" value = "START SIMULATOR" onclick="start()"> <br>
+    <div id="div" style="position:relative;width:800px;height:800px;display: none;">
+        <canvas id = "mycanvas" width="800" height="800" style="border:solid;border-color: black;" ></canvas>
+        <input id = "Slider_1" type="range" style="position:absolute;left:50px;top:300px;width:150px;height: 50px;transform: rotate(270deg)" min="0" max="150" />
+        
+        <label style="position:absolute;left:220px;top:300px;">TANK A</label>
+       
+        <label style="position:absolute;left:310px;top:370px;">Sensor A(1/4th Level)</label>
+  
+    </div>
+    
+</body>
+</html>
