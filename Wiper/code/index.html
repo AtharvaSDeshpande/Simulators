@@ -6,13 +6,53 @@
     <title>Document</title>
     <script src = "app.js" defer></script>
     <script src = "geometry.js" defer></script>
+    <style>
+        *{
+            margin: 0;
+        }
+        .index
+        {
+            display: grid;
+            place-items: center;
+        }
+        #mycanvas{
+            background-color: rgb(153, 238, 206);
+        }
+        .simButtons{
+            display: flex;
+            width: 600px;
+            justify-content: space-between;
+        }
+        .inputField {
+            flex: 1;
+            appearance: textfield;
+            margin: 10px;
+        }
+        .green {
+            background-color: green;
+            color: black;
+            font-size: large
+        }
+        .red{
+            background-color: red;
+            color: black;
+            font-size: large
+        }
+        
+    </style>
 </head>
 <body>
-    <input type = "button" value = "START SIMULATOR" onclick="start()"> <br>
-    <div>
-    <canvas id = "mycanvas" width="900" height = "900" style="border:solid;border-color: black; "> </canvas>
-    <label id = "l1" style = "position:absolute;left:25px;top:300px;">Ignition ON/OFF</label>
-    <label d = "l2" style = "position:absolute;left:25px;top:420px;">Wiper ON/OFF</label>
+    <div class="index">
+    <h1>Application of Digital gates</h1>
+    <h5 id = "msg" style="visibility: hidden">Click on the LED's (gray circles) to start the wiper</h5>
+    <input class="inputField green" id = "start" type = "button" value = "START SIMULATOR" onclick="start()"> <br>
+    
+        <div>
+            <canvas id = "mycanvas" width="500" height = "500" style="border:solid;border-color: black; "> </canvas>
+            <!-- <label id = "l1" style = "position:absolute;left:25px;top:300px;">Ignition ON/OFF</label>
+            <label d = "l2" style = "position:absolute;left:25px;top:420px;">Wiper ON/OFF</label> -->
+        </div>
+   
     </div>
     <script src="../lib/mouseevent.ob.js" defer></script>
 </body>

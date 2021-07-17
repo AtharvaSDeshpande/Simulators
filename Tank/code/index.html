@@ -6,20 +6,72 @@
     <title>Document</title>
     <script src = "geometry.js" defer></script>
     <script src = "app.js" defer></script>
-    
+    <style>
+        *{
+            margin: 0;
+        }
+        .index
+        {
+            display: grid;
+            place-items: center;
+        }
+        #mycanvas{
+            background-color: rgb(153, 238, 206);
+        }
+        .simButtons{
+            display: flex;
+            width: 600px;
+            justify-content: space-between;
+        }
+        .inputField {
+            flex: 1;
+            appearance: textfield;
+            margin: 10px;
+        }
+        .green {
+            background-color: green;
+            color: black;
+            font-size: large
+        }
+        .red{
+            background-color: red;
+            color: black;
+            font-size: large
+        }
+        /* @media only screen and (max-width: 630px) {
+            #mycanvas {
+                width: 400px;
+            }
+            .simButtons{
+                width: 400px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .inputField {
+                flex: 1;
+                appearance: textfield;
+                margin: 5px;
+                margin-bottom: 20px;
+                width: fit-content;
+            }
+        } */
+    </style>
 </head>
 <body>
-    <input type = "button" value = "START SIMULATOR" onclick="start()"> <br>
-    <div id="div" style="position:relative;width:800px;height:800px;display: none;">
-        <canvas id = "mycanvas" width="800" height="800" style="border:solid;border-color: black;" ></canvas>
-        <input id = "Slider_1" type="range" style="position:absolute;left:50px;top:300px;width:150px;height: 50px;transform: rotate(270deg)" min="0" max="150" />
-        <input id = "Slider_2" type="range" style="position:absolute;left:50px;top:100px;width:150px;height: 50px;transform: rotate(270deg)" min="0" max="150" />
-        <label style="position:absolute;left:220px;top:300px;">TANK A</label>
-        <label style="position:absolute;left:220px;top:100px;">TANK B</label>
-        <label style="position:absolute;left:310px;top:370px;">Sensor A(1/4th Level)</label>
-        <label style="position:absolute;left:280px;top:100px;transform: rotate(270deg)">Sensor B</label>
-        <label style="position:absolute;left:260px;top:25px;">Full Level</label>
+    <div class="index">
+        <input class="inputField green" type = "button" value = "START SIMULATOR" onclick="start()"> <br>
+        <div id="div" style="position:relative;width:600px;height:600px;display: none;">
+            <canvas id = "mycanvas" width="600" height="600" style="border:solid;border-color: black;" ></canvas>
+            <input id = "Slider_1" type="range" style="position:absolute;left:50px;top:300px;width:150px;height: 50px;transform: rotate(270deg)" min="0" max="150" />
+            <input id = "Slider_2" type="range" style="position:absolute;left:50px;top:100px;width:150px;height: 50px;transform: rotate(270deg)" min="0" max="150" />
+            <label style="position:absolute;left:220px;top:300px;">TANK A</label>
+            <label style="position:absolute;left:220px;top:100px;">TANK B</label>
+            <label style="position:absolute;left:310px;top:370px;">Sensor A(1/4th Level)</label>
+            <label style="position:absolute;left:280px;top:100px;transform: rotate(270deg)">Sensor B</label>
+            <label style="position:absolute;left:260px;top:25px;">Full Level</label>
+        </div>
     </div>
+   
     
 </body>
 </html>

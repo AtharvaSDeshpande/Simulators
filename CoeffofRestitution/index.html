@@ -6,11 +6,69 @@
     <title>Document</title>
     <script src = "app.js" defer></script>
     <script src = "geometry.js" defer></script>
+    <style>
+        *{
+            margin: 0;
+        }
+        .index
+        {
+            display: grid;
+            place-items: center;
+        }
+        #mycanvas{
+            background-color: rgb(153, 238, 206);
+        }
+        .simButtons{
+            display: flex;
+            width: 600px;
+            justify-content: space-between;
+        }
+        .inputField {
+            flex: 1;
+            appearance: textfield;
+            margin: 10px;
+        }
+        .green {
+            background-color: green;
+            color: black;
+            font-size: large
+        }
+        .red{
+            background-color: red;
+            color: black;
+            font-size: large
+        }
+        @media only screen and (max-width: 630px) {
+            #mycanvas {
+                width: 400px;
+            }
+            .simButtons{
+                width: 400px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .inputField {
+                flex: 1;
+                appearance: textfield;
+                margin: 5px;
+                margin-bottom: 20px;
+                width: fit-content;
+            }
+        }
+    </style>
 </head>
 <body>
-    ENTER COEFFICIENT OF RESTITUTION (e) FOR BALL : <input type="number" id = "t1"> <br>
-    CLICK TO START ANIMATION : <input type = "button" value = "Start" onclick="start()"><br>
-    CLICK TO STOP ANIMATION : <input type = "button" value = "Stop" onclick="stop()"><br>
-    <canvas id = "mycanvas" width="600" height = "600" style="border:solid;border-color: black; "> </canvas>
+   <div class="index">
+       <h3>Coefficient of Restitution Simulator</h3>
+       <div class="simButtons">
+            <input class="inputField" placeholder="Enter Coefficient of Restitution" type="number" id = "t1"> <br>
+            <input class="inputField green" type = "button" value = "Start" onclick="start()"><br>
+            <input class="inputField red" type = "button" value = "Stop" onclick="stop()"><br>
+        </div>  
+        <canvas id = "mycanvas" width="600" height = "600" style="border:solid;border-color: black; "> </canvas>
+        
+   </div>
+   
+    
 </body>
 </html>

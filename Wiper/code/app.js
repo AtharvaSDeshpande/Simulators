@@ -24,6 +24,8 @@ function start() {
         let a1 = new Geometry.point(320, 325);
         C = new Geometry.circle(c1, a1, 2, context);
     }
+    document.getElementById("start").style.visibility = "hidden";
+    document.getElementById("msg").style.visibility = "";
     drawall();
     //animate();
 }
